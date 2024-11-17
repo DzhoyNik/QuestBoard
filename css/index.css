@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+:root {
+    --color-1: #2f2f2f;
+    --color-2: #af3fff;
+    --image-border-radius: 50px;
+    --section-color: #fff;
+    --section-border-radius: 15px;
+    --box-shadow: 0 0.5rem 10px #d4d4d4;
+    --task-color: #9e9e9e;
+}
+
+@media screen and (min-width: 769px) {
+    .wrapper-body .auth-form {
+        width: 35%;
+    }
+
+    .wrapper-body .image {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper-body .auth-form {
+        width: 100%;
+    }
+    
+    .wrapper-body .image {
+        display: none;
+    }
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.modal .modal-body {
+    width: 35%;
+    height: 40%;
+}
+
+.modal-body .modal-verify {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px dashed var(--color-2);
+    border-radius: var(--section-border-radius);
+}
+
+.modal-verify h1 {
+    font-size: 2.5rem;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.modal-verify p {
+    color: var(--task-color);
+    font-size: 1.35rem;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 2rem;
+}
+
+.modal-verify .modal-inputs {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-inputs input {
+    width: 5%;
+    text-align: center;
+    font-size: 1.75rem;
+    padding: 0.5rem 0.75rem;
+    transition: 0.3s ease;
+    border-radius: var(--section-border-radius);
+    border: 1px solid var(--task-color);
+}
+
+.modal-inputs input:not(:placeholder-shown) {
+    border: 1px solid var(--color-2);
+}
+
+.wrapper .wrapper-body {
+    width: 85vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+}
+
+.wrapper-body .auth-form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-form .auth-body {
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--section-color);
+    box-shadow: var(--box-shadow);
+    animation: opacityAuth 0.5s 1;
+}
+
+.auth-body form {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border: 4px dashed var(--color-2);
+    border-radius: 15px;
+    position: relative;
+}
+
+form h1 {
+    color: var(--color-1);
+    font-family: "Oswald", sans-serif;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+form input {
+    font-size: 1.25rem;
+    border-bottom: 1px solid var(--task-color);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+form button {
+    color: #fff;
+    font-size: 1.35rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-2);
+}
+
+form button:nth-of-type(2) {
+    color: var(--color-1);
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+    background-color: unset;
+}
+
+.auth-body #sign-up {
+    display: none;
+}
+
+form#sign-up button:nth-of-type(2) {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transform: scale(1.25);
+}
+
+.wrapper-body .image {
+    width: 65%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    animation: opacityImage 0.5s 1;
+}
+
+.wrapper-body .image::before {
+    content: "";
+    position: absolute;
+    top: 13rem;
+    right: 12rem;
+    width: 300px;
+    height: 300px;
+    z-index: 0;
+    animation: topAndRight 0.5s 1;
+    border-radius: var(--image-border-radius);
+    background-color: var(--section-color);
+}
+
+.wrapper-body .image::after {
+    content: "";
+    position: absolute;
+    bottom: 10rem;
+    left: 10rem;
+    width: 300px;
+    height: 300px;
+    z-index: 0;
+    border-radius: var(--image-border-radius);
+    animation: bottomAndLeft 0.5s 0.1s 1;
+    animation-fill-mode: backwards;
+    background: linear-gradient(130deg, #af3fff, #932cdd);
+}
+
+@keyframes opacityAuth {
+    from {
+        transform: translateY(-3rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0rem);
+        opacity: 100%;
+    }
+}
+
+@keyframes opacityImage {
+    from { opacity: 0; }
+    50% { transform: scale(1.1); }
+    to {
+        transform: scale(1);
+        opacity: 100%;
+    }
+}
+
+@keyframes swayingImage {
+    from {
+        transform: translateY(-0.5rem);
+    }
+    50% {
+        transform: translateY(0.5rem);
+    }
+    to {
+        transform: translateY(-0.5rem);
+    }
+}
+
+@keyframes topAndRight {
+    from {
+        opacity: 0;
+        top: 20rem;
+        right: 20rem;
+    }
+
+    to {
+        opacity: 100%;
+        top: 13rem;
+        right: 12rem;
+    }
+}
+
+@keyframes bottomAndLeft {
+    from {
+        opacity: 0;
+        bottom: 20rem;
+        left: 20rem;
+    }
+
+    to {
+        opacity: 100%;
+        bottom: 10rem;
+        left: 10rem;
+    }
+}
+
+.image img {
+    width: 110%;
+    z-index: 1;
+    animation: swayingImage 5s infinite;
+}

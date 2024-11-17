@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import "./modals/modalAdd.css";
+@import "./modals/modalDelete.css";
+@import "./modals/modalSettings.css";
+
+.wrapper-body .modal {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.modal .modal-body {
+    min-width: 1vw;
+    min-height: 1vh;
+    padding: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleAndOpacity 0.3s 1;
+    background-color: var(--sidebar-background);
+}
+
+.modal-body .modal-close {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.modal-close span {
+    color: var(--color-1);
+    font-size: 2rem;
+}

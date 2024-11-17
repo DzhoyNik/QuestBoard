@@ -1,0 +1,74 @@
+.modal-body .form-add {
+    width: 25vw;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-add .form-title {
+    width: 91%;
+    padding: 1rem;
+    border: 2px dashed var(--task-color);
+    border-radius: var(--section-border-radius);
+    margin-bottom: 1rem;
+}
+
+.form-add input {
+    width: 91%;
+    padding: 0.5rem 1rem;
+    font-size: 1.35rem;
+    font-family: "Roboto", sans-serif;
+    transition: 0.3s ease;
+    border-bottom: 2px solid var(--task-color);
+}
+
+.form-add input:not(:placeholder-shown) {
+    border-bottom: 2px solid var(--color-2);
+}
+
+.form-add .form-text {
+    width: 91%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px dashed var(--task-color);
+    border-radius: var(--section-border-radius);
+}
+
+.form-add textarea {
+    resize: vertical;
+    width: 91%;
+    min-height: 15vh;
+    padding: 0.5rem 1rem;
+    font-size: 1.35rem;
+    font-family: "Roboto", sans-serif;
+    border-bottom: 2px solid var(--task-color);
+}
+
+.form-add textarea:not(:placeholder-shown) {
+    border-bottom: 2px solid var(--color-2);
+}
+
+.form-add .form-date {
+    width: 91%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px dashed var(--task-color);
+    border-radius: var(--section-border-radius);
+}
+
+.form-date input {
+    width: 37%;
+}
+
+.form-add button {
+    width: 98%;
+    color: var(--section-color);
+    background-color: var(--color-2);
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    padding: 0.75rem 0rem;
+    border-radius: 5px;
+}

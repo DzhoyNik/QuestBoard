@@ -1,0 +1,106 @@
+.modal-body .form-delete {
+    display: none;
+    width: 25vw;
+    min-height: 5vh;
+}
+
+.form-delete .select-input {
+    cursor: pointer;
+    width: 99%;
+    height: 6vh;
+    position: relative;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    border: 2px dashed var(--task-color);
+    border-radius: var(--section-border-radius);
+}
+
+.form-delete .select-input p {
+    color: var(--task-color);
+    margin-left: 1rem;
+}
+
+.form-delete .select-input::after {
+    content: "ᐊ";
+    position: absolute;
+    color: var(--task-color);
+    fill: var(--task-color);
+    top: 0.85rem;
+    right: 1rem;
+    font-size: 1.35rem;
+}
+
+.form-delete .select-body {
+    width: 93%;
+    min-height: 6vh;
+    max-height: 28vh;
+    padding: 1rem;
+    background-color: #f1f0ff;
+    border-radius: var(--section-border-radius);
+    margin-bottom: 1rem;
+    overflow-y: auto;
+}
+
+.select-body .select {
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    width: 100%;
+    height: 8vh;
+    background-color: #fff;
+    transition: 0.3s ease;
+    border-radius: var(--section-border-radius);    
+}
+
+.select-body .select:hover {
+    transform: scale(1.02);
+}
+
+.select-body .select:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.select-body .select-title {
+    width: 100%;
+    height: 50%;
+}
+
+.select-body .select-title h1 {
+    color: var(--color-1);
+    font-size: 1.5rem;
+    padding: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Roboto", sans-serif;
+    transition: 0.3s ease;
+}
+
+.select-body .select-text {
+    width: 100%;
+    height: 50%;
+}
+
+.select-body .select-text p {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.3s ease;
+}
+
+.select-body .select input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.form-delete button {
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    padding: 1rem;
+    border-radius: var(--section-border-radius);
+    color: var(--section-color);
+    background: var(--section-background-3);
+}
