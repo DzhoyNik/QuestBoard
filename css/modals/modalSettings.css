@@ -1,0 +1,111 @@
+.modal-body .form-setting {
+    display: none;
+    width: 25vw;
+    min-height: 35vh;
+    padding: 0.5rem 0rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-setting input {
+    width: 91%;
+    padding: 0.5rem 1rem;
+    font-size: 1.35rem;
+    font-family: "Roboto", sans-serif;
+    transition: 0.3s ease;
+    border-bottom: 2px solid var(--task-color);
+}
+
+.form-setting input:not(:placeholder-shown) {
+    border-bottom: 2px solid var(--color-2);
+}
+
+.form-setting .form-login {
+    width: 91%;
+    padding: 1rem;
+    border: 2px dashed var(--task-color);
+    border-radius: var(--section-border-radius);
+    margin-bottom: 1rem;
+}
+
+.form-setting .form-email {
+    width: 91%;
+    padding: 1rem;
+    border: 2px dashed var(--task-color);
+    border-radius: var(--section-border-radius);
+    margin-bottom: 1rem;
+}
+
+.form-setting .form-password {
+    width: 91%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px dashed var(--task-color);
+    border-radius: var(--section-border-radius);
+    margin-bottom: 1rem;
+}
+
+.form-password input:nth-child(1) {
+    margin-bottom: 1rem;
+}
+
+.form-setting button {
+    width: 98%;
+    color: var(--section-color);
+    background-color: var(--color-2);
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    padding: 0.75rem 0rem;
+    border-radius: 5px;
+}
+
+.modal-body .form-success {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    animation: scaleAndOpacity 0.3s 1;
+    box-shadow: 0 0 5rem inset #73f563;
+}
+
+.form-success .form-body {
+    width: 25%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--section-color);
+}
+
+.form-body .form-icon {
+    width: 75px;
+    height: 75px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px dashed #73f563;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+}
+
+.form-body .form-icon>span {
+    color: #73f563;
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.form-body .form-text p {
+    color: var(--color-1);
+    font-size: 2rem;
+    font-family: "Oswald Bold", sans-serif;
+}

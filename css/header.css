@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+.wrapper-body .header {
+    width: 97%;
+    height: 10vh;
+    margin: 0 auto;
+}
+
+.header .header-body {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 12.5% 75% 12.5%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.header-body .header-date {
+    width: 60%;
+    height: 100%;
+    font-family: "Oswald Bold", sans-serif;
+    line-height: 2rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-date .header-time {
+    display: flex;
+    animation: headerTime 0.5s 1;
+}
+
+@keyframes headerTime {
+    from {
+        transform: translateY(-3rem);
+    }
+    to {
+        transform: translateY(0rem);
+    }
+}
+
+.header-time h1 {
+    color: var(--color-1);
+}
+
+.header-time h1:nth-child(3) {
+    color: var(--color-2);
+}
+
+.header-date .header-day {
+    display: flex;
+    animation: headerDay 0.5s 1;
+    font-size: 0.75rem;
+}
+
+@keyframes headerDay {
+    from {
+        transform: translateY(3rem);
+    }
+    to {
+        transform: translateY(0rem);
+    }
+}
+
+.header-day h1 {
+    color: var(--color-1);
+}
+
+.header-day h1:nth-child(1) {
+    color: var(--color-2);
+}
+
+.header-body .header-buttons {
+    width: 55%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.header-body .section {
+    width: 95%;
+    height: 80%;
+    cursor: pointer;
+    color: var(--section-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    animation: scaleAndOpacity 0.5s 1;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--section-border-radius);
+}
+
+.header-body .section:hover {
+    box-shadow: none;
+}
+
+.header-body .section:nth-child(1) {
+    animation-delay: 0.1s;
+    animation-fill-mode: backwards;
+    background: var(--section-background-1);
+}
+.header-body .section:nth-child(2) {
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+    background: var(--section-background-3);
+}
+
+.header-body .section span {
+    font-size: 2rem;
+}
+
+.header-body .header-profile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-profile .header-greating {
+    user-select: none;
+    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: var(--section-color);
+    border-radius: var(--section-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: 0.3s ease;
+    animation: scaleAndOpacity 0.5s 1;
+    z-index: 1;
+}
+
+.header-profile .header-greating h1 {
+    color: var(--color-1);
+    font-size: 1.75rem;
+    font-family: "Oswald Bold", sans-serif;
+}
+
+.header-profile .header-greating:hover {
+    box-shadow: none;
+}
+
+.header-profile .header-actions {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 3.7rem;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.header-actions button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color: var(--color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--section-color);
+    z-index: 0;
+}
+
+.header-actions button>span {
+    font-weight: 500;
+}
+
+.header-actions button:nth-child(2) {
+    margin-left: 1rem;
+}
